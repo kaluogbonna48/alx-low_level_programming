@@ -6,15 +6,14 @@
  */
 void _print_rev_recursion(char *s)
 {
-	char *newLine = "\n";
 	if (*s)
 	{
-		_print_rev_recursion(s + 1);
+		_print_rev_recursion(++s);
 		_putchar(*s);
 	}
 	else
 	{
-		_putchar(*newLine);
-		return;
+	_putchar('\n');
+	return;
 	}
 }
